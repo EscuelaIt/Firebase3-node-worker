@@ -12,6 +12,11 @@ admin.initializeApp({
 //worker gestion de altas de usuario
 require('./firebase-admin/gestion-registro')(admin);
 
+//solicitudes para hacer un meme público
+require('./firebase-admin/request-public-meme')(admin);
+
+//solicitud de notificaciones
+require('./firebase-admin/request-notification')(admin);
 
 // var db = admin.database();
 // var ref = db.ref('users');

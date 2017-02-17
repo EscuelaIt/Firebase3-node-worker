@@ -9,7 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.14.1",
+    "fcm-node": "^1.0.16",
     "firebase-admin": "^4.1.1",
-    "jimp": "^0.2.27"
+    "jimp": "^0.2.27",
+    "moment": "^2.17.1"
   }
 }
