@@ -1,4 +1,6 @@
 
+
+
 var admin = require('firebase-admin');
 
 admin.initializeApp({
@@ -17,6 +19,11 @@ require('./firebase-admin/request-public-meme')(admin);
 
 //solicitud de notificaciones
 require('./firebase-admin/request-notification')(admin);
+
+//solicitudes para compartir un meme por twitter
+require('./firebase-admin/request-twitter-share')(admin);
+
+
 
 // var db = admin.database();
 // var ref = db.ref('users');

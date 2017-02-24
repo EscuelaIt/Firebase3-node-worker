@@ -1,6 +1,10 @@
 const refService = require('./ref-service');
 const avatarService = require('../modules/avatar-service');
 
+//variables de entorno
+var common = require('../modules/common');
+var config = common.config();
+
 module.exports = function(admin) {
   var db = admin.database();
   var ref = db.ref(refService('userAll'));
@@ -20,7 +24,7 @@ function saveAvatar(db, image, userid) {
   avatarService.saveImage(image, userid)
     .then( destino => {
       let refAvatar = db.ref(refService('userAvatar', userid));
-      refAvatar.set('http://localhost:3001/' + destino);
+      refAvatar.set(config.SERVERURL + destino);
     })
     .catch( (err) => console.log('error al guardar la imagen de avatar: ', err));
 }
